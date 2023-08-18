@@ -93,7 +93,7 @@ for i in range(len(input["html"])):
     print("the length of all cleaned body_header, noscript and script for link {} are {}, {}, {}".format
           (input["_root"][i], body_header_raw_html_cleaned_length, noscript_raw_html_cleaned_length,
            script_raw_html_cleaned_length))
-    print("xxxxxxxxxxxxxx")
+    print("---------")
     input.at[i, 'body_header_cleaned'] = body_header_raw_html_cleaned
     input.at[i, 'body_header_cleaned_length'] = body_header_raw_html_cleaned_length
     input.at[i, 'noscript_cleaned'] = noscript_raw_html_cleaned
@@ -101,6 +101,6 @@ for i in range(len(input["html"])):
     input.at[i, 'script_cleaned'] = script_raw_html_cleaned
     input.at[i, 'script_cleaned_length'] = script_raw_html_cleaned_length
 
-input.to_csv("cleaned_html.csv", index=False)
+input.to_csv("cleaned_htmls.csv", index=False)
 
 
